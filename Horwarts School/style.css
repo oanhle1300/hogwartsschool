@@ -1,0 +1,592 @@
+*{
+    box-sizing:border-box;
+    margin:0;
+    padding:0;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header{
+    min-height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(hogwarts-castle-.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+}
+nav{
+    display: flex;
+    padding: 2% 6%;
+    justify-content: space-between;
+    align-items: center;
+}
+nav img{
+    width:100px;
+}
+.nav-links{
+    flex: 1;
+    text-align: right;
+}
+.menu__items{
+    list-style-type: none;
+    display: inline-block;
+    padding: 8px 10px;
+    position: relative;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 13px;
+}
+.menu__link{
+    color: #fff;
+    text-decoration: none;
+}
+.menu__items::after{
+    content: '';
+    width: 0%;
+    height:2px;
+    background:#dfb000;
+    display: block;
+    margin: auto;
+    transition: 0.5s;
+}
+.menu__items:hover::after{
+    width: 100%;
+}
+.menu__child{
+    list-style-type:none;
+    width:150px;
+    position:absolute;
+    left:0;
+    display:none;
+    z-index: 1;
+}
+.menu__items:hover .menu__child{
+    display: block;
+    padding: 5px;
+}
+.menu__child-items{
+    font-size: 0.9rem;
+    text-transform: none;
+    font-weight: normal;
+    height:30px;
+    background:#a3a1a154;
+    color:white;
+    text-align:justify;
+    padding:5px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow: ellipsis;
+    position:relative;
+
+}
+.menu__child-items:hover {
+    color:#dfb000;
+    background:#a3a1a154;
+    animation:slide 1s;
+}
+.menu__child-items:hover .menu__child-link{
+    color:#dfb000;
+}
+.menu__child-link{
+    color:white;
+    text-decoration: none;
+}
+@keyframes slide{
+    0%{left:5px;}
+    20%{left:-4px;}
+    40%{left:3px;}
+    60%{left:-2px;}
+    80%{left:1px;}
+    100%{left:0px;}
+}
+.text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.text-box h1{
+    font-size:50px;
+    margin-top: 80px;
+}
+.text-box p{
+    margin: 20px 0 40px;
+    font-size: 20px;
+    align-content:center;
+
+}
+
+.hogwarts-houses{
+    width:100%;
+    margin:auto;
+    padding-top: 30px;
+    background: #10141b;
+}
+.houses{
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-bottom: 30px;
+    
+}
+.houses>p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color:white;
+    
+}
+.house{
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    
+    
+}
+.house-name{
+    text-decoration: none;
+    color: #fff;
+    margin: 0 10px;
+    position: relative;
+    width: 50%;
+}
+.house-img{
+    opacity: 1;
+    display: block;
+    width: 100%;
+    height: auto;
+    transition: .5s ease;
+    backface-visibility: hidden;
+}
+.middle {
+    transition: .5s ease;
+    opacity: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+    text-align: center;
+}
+.house-name:hover .house-img{
+    opacity:0.3;
+    
+}
+.house-name:hover .middle{
+    opacity:1;
+    
+}
+.name{
+    color:white;
+    font-size: 16px;
+}
+
+
+
+.news{
+    width:100%;
+    margin:auto;
+    padding-top: 30px;
+    background-image: url(bg-93724927d97aed53189ed6c949ad8547.jpg);
+    background-size: cover;
+    align-content:center;
+}
+.latest-news{
+    min-height: 100vh;
+    padding-left: 150px;
+}
+.latest-news p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color:white;
+}
+.headline{
+    float:left;
+    position:relative;
+    align-items: center;
+}
+.headline-link{
+    text-decoration: none;
+}
+
+.headline_name{
+    position: absolute; 
+    width: 500px;
+    height: 150px;
+    left:70%;
+    bottom: 25%;
+    color:#fff ;
+    background:rgba(20, 20, 20, 0.822) ;
+    text-align: center;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 20px;
+    
+}
+.headline_name:hover{
+    box-shadow:rgba(178, 178, 185, 0.336)  0px 7px 29px 0px;
+    color:rgb(243, 133, 30);
+}
+.headline-link img{
+    max-width:950px;
+    height:auto;
+}
+
+.slide-news{
+    width:100%;
+    margin:auto;
+    padding-top: 30px;
+    background: #10141b;
+    align-content:center;
+}
+.slide-news>p{
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 2rem;
+    padding-bottom: 10px;
+    color:white;
+    padding-left: 150px;
+}
+.slide-news-items{
+    margin: top 5%;
+    display: flex;
+    justify-content: space-between;
+    overflow-x: hidden;
+    /* padding: 0 150px; */
+}
+
+.slide-news-items li{
+    flex-basis: 25%;
+    border-radius: 10px;
+    margin-bottom: 5%;
+    padding: 27px ;
+    box-sizing: border-box;
+    list-style-type: none;
+    transition: 0.5s;
+}
+.slide-news-items li:hover{
+    box-shadow:rgba(100,100,111,0.2)  0px 7px 29px 0px;
+    
+}
+.slide-links{
+    text-decoration: none;
+    color: #fff;
+}
+.slide-links p{
+    text-align: center;
+    font-weight: bold;
+    margin-top: 10px;
+}
+.slide-links p:hover{
+    color:#D3A625;
+}
+.slide-links img{
+    height: 215px;
+    width:280px;
+}
+.right-links{
+    align-items: right;
+    padding-right: 150px;
+    padding-left:150px;
+    text-align: right;
+    padding-bottom: 30px;  
+}
+.bot-border{
+    border-bottom: 1px solid #949494;
+}
+.right-links a{
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    color:#fff;
+    border-bottom: 1px solid transparent;
+}
+
+
+
+.footer{
+    width: 100%;
+    text-align: center;
+    padding: 30px 0;  
+    background: #242633;
+}
+.footer p{
+    color: #fff;
+    margin-bottom: 10px;
+}
+.icons .fa{
+    color: #fff;
+    margin: 0 13px;
+    cursor: pointer;
+    padding 18px 0;
+    font-size: 20px;
+}
+
+
+
+.sub-header{
+    height: 100vh;
+    width:100%;
+    background-image: linear-gradient(rgba(4,9,30,0.7),rgba(4,9,30,0.7)),url(alexia-housden-render-01.jpg);
+    background-position: center;
+    background-size: cover;
+    position: relative;
+    text-align: center;
+}
+.sub-text-box{
+    width: 90%;
+    color: white;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.sub-text-box h1{
+    font-size:50px;
+    margin-top: 80px;
+}
+.sub-text-box p{
+    margin: 20px 0 40px;
+    font-size: 18px;
+    font-style: italic;
+    text-align: center;
+}
+.sub-text-box strong{
+    text-transform: uppercase;
+    text-align: right;
+    font-size: 15px;
+}
+
+
+.house-info{
+    width: 100%;
+    height:auto;
+    background: #740001;
+}
+.info-content{
+    padding: 50px 150px;
+    color:  #D3A625;
+} 
+.header-info{
+    text-align: center;
+}
+.house-logo{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 250px;
+    padding-bottom: 20px;
+}
+.header-info h1{
+    text-align: center;
+    font-size: 30px;
+    padding-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.info-content .row-content:not(.header-info) {
+    padding: 10px 250px;
+    
+}
+.row-content{
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    display: -webkit-box;
+    display: flex;
+    flex-direction: row;
+    overflow: hidden;
+    width: 100%;
+    padding: 10px;
+    
+}
+.row-content>div{
+    width: 800px;
+    font-size: medium;
+    line-height: 25px;
+    
+}
+.row-content h3{
+    width: 800px;
+    text-transform: uppercase;
+}
+
+
+.about-gryffindor{
+    width: 100%;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom: 50px;
+    background-color: #AE0001;
+}
+.about-1{
+    padding-left: 150px;
+    padding-right: 150px;
+    color:#C0C0C0;
+    font-size: 1rem;
+}
+.about-1 h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.about-1 p{
+    
+    text-align: justify;
+    padding: 10px 0 25px;
+    line-height: 25px;
+    color:#C0C0C0;
+    font-weight: 500;
+    
+}
+
+
+.founder{
+    width: 100%;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom: 50px;
+    background-color: #FAF6F0;
+}
+.row{
+    padding-left: 150px;
+    padding-right: 150px;
+}
+.row h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.row h1{
+    text-align: center;
+    color: #000;
+    margin-bottom: 20px;
+}
+.box{
+    display: flex;
+    box-sizing: border-box;
+}
+.box .img1{
+    width: 400px;
+}
+.box .contentf{
+    padding-right: 20px;
+}
+.box .img1 img{
+    max-width: 400px;
+ }
+.contentf p{
+    text-align: justify;
+    padding: 10px 0 25px;
+    line-height: 25px;
+    color:#797979;
+    font-weight: 700;
+}
+
+.traits{
+    width: 100%;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom: 50px;
+    background-color: #D3A625;
+}
+.traits-1{
+    padding-left: 150px;
+    padding-right: 150px;
+    color:#740001;
+    font-size: 1rem;
+}
+.traits-1 h3{
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+.traits-1 p{
+    
+    text-align: justify;
+    padding: 10px 0 25px;
+    line-height: 25px;
+    color:#740001;
+    font-weight: 500;
+    
+}
+
+.famous-students{
+    width: 100%;
+    background-color: #000;
+    margin:auto;
+    padding-top:80px;
+    padding-bottom: 50px;
+    
+}
+.student{
+    padding-left: 150px;
+    padding-right: 150px;
+    
+   
+}
+.student h3{
+    color:#fff;
+    margin-bottom: 30px;
+    text-transform: uppercase;
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+.cards{
+    display: flex;
+    margin-left: -30px;
+}
+.card{
+    background-image: url(bg-30fc530bcc84ef1c46efe09cbecf27dc.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    box-shadow:rgba(100,100,111,0.2)  0px 7px 29px 0px;
+    width: calc(33.33% - 30px);
+    margin-left: 30px;
+    margin-right: 30px;
+    min-height: 380px;
+    margin-top: 100px;
+    position: relative;
+}
+.card-image{
+    max-width: 300px;
+    height: auto;
+    object-fit: cover;
+    margin-top: -100px;
+    position: relative;
+}
+.card-content{
+    margin-top: 100px;
+    position: absolute;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    
+}
+.card-tittle{
+
+    color: #fff;
+    font-size: 30px;
+    font-weight: 700;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: 1.15;
+    letter-spacing: normal;
+    text-align: center;
+}
+.student div{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding: 10px;
+    flex-basis: 31%;
+    box-sizing: border-box;
+   
+}
