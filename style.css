@@ -560,7 +560,7 @@ nav img{
     margin-top: 100px;
     position: absolute;
     top: 50%;
-    left: 75%;
+    left: 55%;
     transform: translate(-50%,-50%);
     text-align: center;
     
@@ -582,4 +582,8 @@ nav img{
     padding: 10px;
     flex-basis: 31%;
     box-sizing: border-box;
+}
+.card-content:hover .card-tittle{
+    color: #D3A625;
+    cursor: pointer;
 }
