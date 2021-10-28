@@ -525,9 +525,8 @@ nav img{
     
 }
 .student{
-    
-    
-   
+    padding-left: 150px;
+    padding-right: 150px; 
 }
 .student h3{
     color:#fff;
@@ -539,16 +538,16 @@ nav img{
 
 .cards{
     display: flex;
-    margin-left: -30px;
+    margin-left: -20px;
 }
 .card{
     background-image: url(bg-30fc530bcc84ef1c46efe09cbecf27dc.png);
     background-repeat: no-repeat;
     background-size: cover;
     box-shadow:rgba(100,100,111,0.2)  0px 7px 29px 0px;
-    width: calc(33.33% - 30px);
-    margin-left: 30px;
-    margin-right: 30px;
+    width: calc(33.33% - 20px);
+    margin-left: 20px;
+    margin-right: 20px;
     min-height: 380px;
     margin-top: 100px;
     position: relative;
